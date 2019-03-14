@@ -1,0 +1,32 @@
+.NaviBar {
+  display: grid; 
+  grid-column-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-content: space-around;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: bolder;
+  color: whitesmoke;
+  background: rgb(2, 9, 51);
+  min-height: 75px;
+}
+.NaviBar a {
+  color:whitesmoke;
+  text-align: center;
+  text-decoration: none;
+}
+
+.naviMenu{
+  grid-column-end: 5;
+  text-align: left;
+}
+.naviMenu a {
+  font-family: sans-serif;
+  font-size: 20px;
+  padding-right: 25%;
+  text-decoration: none;
+  color: whitesmoke;
+  min-height: 75px;
+  text-align: right;
+}
+

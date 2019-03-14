@@ -32,7 +32,7 @@ const getSingleInfo = (req, res, next) => {
 }
 
 const getCommentsByMovieID = (req, res, next) => {
-  db.any('SELECT * FROM Comments WHERE  movies_id = $1', [req.params.id]).then((data) => {
+  db.any('SELECT * FROM Comments WHERE  movies_id = $1 ORDER BY id DESC', [req.params.id]).then((data) => {
     res.status(200).json({
       status: 200,
       data: data
@@ -63,10 +63,9 @@ const insertComment = (req, res, next) => {
 }
 
 const insertRating = (req, res, next) => {
-  db.any("INSERT INTO rating (stars, movies_id) VALUES($1, $2)", {
-    stars: req.body.stars,
-    movie_id: req.body.movie_id
-  }).then((data) => {
+  db.any("INSERT INTO rating (stars, movie_id) VALUES($1, $2)", [
+    req.body.stars,req.body.movie_id]
+  ).then((data) => {
     res.status(200).json({
       status: 200,
       message: "success"

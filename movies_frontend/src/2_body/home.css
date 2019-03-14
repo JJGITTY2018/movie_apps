@@ -1,0 +1,13 @@
+.Home_Body{
+  background-color: black;
+  height: 100vh;
+}
+
+
+.Home_Body h1 {
+  font-family: sans-serif;
+  color: rgb(241, 47, 60);
+  padding: 200px;
+  text-align: center;
+  font-size: 100px;
+}

@@ -1,19 +1,18 @@
 import React, {Component} from "react"
 import { NavLink } from "react-router-dom"
+import "./navi.css"
 
 export default class Navi extends Component{
-  constructor (props) {
-    super(props)
-  }
 
   render(){
     return (
       <>
-      <h1> NaviBar</h1>
-      <div className = "naviMenu" >
+      <div className = "NaviBar">
       <NavLink to = "/home"> Home </NavLink>
+      <div className = "naviMenu" >
       <NavLink to = "/movies"> All Movies </NavLink>
       <NavLink to = "/movies/genre"> By Genre </NavLink>
+      </div>
       </div>
       </>
     )
